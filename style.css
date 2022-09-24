@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --clr-violet: #19113e;
+  --clr-light-violet: #725ef4;
+  --clr-orange: #b17e6a;
+  --clr-dark: #121212;
+  --clr-primary: #342b6b;
+  --clr-light: #d2d2e9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+.container {
+  width: 100%;
+  max-width: 1248px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.wrapper,
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin: 3rem 0;
+  color: var(--clr-orange);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.note {
+  width: 265px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.note__tools {
+  display: flex;
+  justify-content: flex-end;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.btn {
+  width: 80px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--clr-light-violet);
+  border-radius: 0.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--clr-light-violet);
+  transition: color 0.2s ease-in, border-color 0.2s ease-in;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--clr-orange);
+  color: var(--clr-orange);
+}
+
+.note__add {
+  margin-bottom: 2rem;
+  background-color: var(--clr-light-violet);
+  border: none;
+  color: var(--clr-light);
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.note__add:hover {
+  background-color: var(--clr-orange);
+  color: var(--clr-dark);
+}
+
+.note__delete {
+  margin-left: 1rem;
+}
+
+.note__text {
+  background-color: var(--clr-violet);
+  color: var(--clr-light);
+  overflow: hidden;
+}
+
+.note__textarea {
+  color: var(--clr-light);
+  background-color: var(--clr-primary);
+}
+.note__textarea, .note__text {
+  width: 100%;
+  min-height: 250px;
+  margin-bottom: 0.6rem;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.note__textarea::placeholder {
+  color: #868686;
+}
+
+.note__textarea:focus {
+  outline: 1px solid var(--clr-light);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 890px) {
+  .wrapper, .main {
+    align-items: center;
+  }
+  .flex {
+    justify-content: space-evenly;
+  }
+}
+
+
