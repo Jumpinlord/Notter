@@ -60,7 +60,7 @@ body {
 }
 
 .btn {
-  width: 80px;
+  width: 110px;
   padding: 0.5rem 1rem;
   background-color: transparent;
   border: 1px solid var(--clr-light-violet);

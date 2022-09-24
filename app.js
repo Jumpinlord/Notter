@@ -14,10 +14,10 @@ function addNewNote(text = '') {
   note.classList.add('note');
   note.innerHTML = `
       <p class="note__text ${text ? '' : 'hidden'}"></p>
-      <textarea class="note__textarea ${text ? 'hidden' : ''}" placeholder="My note..."></textarea>
+      <textarea class="note__textarea ${text ? 'hidden' : ''}" placeholder="..."></textarea>
       <div class="note__tools">
-        <button class="note__edit btn">Save</button>
-        <button class="note__delete btn">Delete</button>
+        <button class="note__edit btn">Сохранить</button>
+        <button class="note__delete btn">Удалить</button>
       </div>
     `;
 
@@ -34,10 +34,10 @@ function addNewNote(text = '') {
     textArea.classList.toggle('hidden');
 
     if (!noteText.classList.contains('hidden')) {
-      editBtn.textContent = 'Edit';
+      editBtn.textContent = 'Изменить';
     }
     else if (noteText.classList.contains('hidden')) {
-      editBtn.textContent = 'Save';
+      editBtn.textContent = 'Сохранить';
     }
   });
 
@@ -57,10 +57,10 @@ function addNewNote(text = '') {
 
 
   if (!noteText.classList.contains('hidden')) {
-    editBtn.textContent = 'Edit';
+    editBtn.textContent = 'Изменить';
   }
   else if (noteText.classList.contains('hidden')) {
-    editBtn.textContent = 'Save';
+    editBtn.textContent = 'Сохранить';
   }
 }
 
